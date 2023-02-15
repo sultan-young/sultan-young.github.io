@@ -1,6 +1,11 @@
 <div class="site-header">
   <div class="wrapper">
-    <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}<b class="command_prompt"></b><b class="blinking_cursor">_</b></a>
+    <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}
+      <b class="command_prompt"></b>
+    </a>
+    <span class="site-input" contenteditable="true" placeholder="请输入内容">
+      <!-- <b class="blinking_cursor">_</b> -->
+    </span>
     <span class="social_links">
         {% for link in site.dash.social_links %}
         {% if link.fa == true %}
@@ -12,3 +17,8 @@
     </span>
   </div>
 </div>
+<script>
+  setTimeout(() => {
+    $('.site-input').focus()
+  }, 0);
+</script>

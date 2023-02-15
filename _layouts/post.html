@@ -67,7 +67,7 @@ layout: default
     }
   }
 
-  document.getElementById('animated-post-description').style.display = 'initial';
+  document.getElementById('animated-post-description') && (document.getElementById('animated-post-description').style.display = 'initial');
   typeWriter();
 
   // Image modal
