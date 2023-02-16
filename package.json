@@ -1,0 +1,19 @@
+{
+  "name": "sultan-home",
+  "version": "1.0.0",
+  "description": "<img align='right' src='./git-cat.gif' width='200\"'> Here are some ideas to get you started:",
+  "main": "index.js",
+  "scripts": {
+    "start": "jekyll serve --livereload"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sultan-young/sultan-young.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sultan-young/sultan-young.github.io/issues"
+  },
+  "homepage": "https://github.com/sultan-young/sultan-young.github.io#readme"
+}
