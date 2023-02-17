@@ -440,3 +440,15 @@ ul.related-posts {
 .modal{
   cursor: pointer;
 }
+
+details {
+  cursor: pointer;
+  padding: 2px 0px 10px 10px;
+  & :not(summary) {
+    padding: 10px;
+    margin-top: 10px;
+    background-color: $color-paper;
+    display: inline-block;
+    color: #000;
+  }
+}
