@@ -6,8 +6,8 @@
 # Sample workflow for building and deploying a Jekyll site to GitHub Pages
 name: Deploy Jekyll site to Pages
 
+# on字段指定触发 workflow 的条件，通常是某些事件。
 on:
-  # Runs on pushes targeting the default branch
   push:
     branches: ["master"]
 
@@ -28,7 +28,9 @@ concurrency:
 jobs:
   # Build job
   build:
+    # runs-on字段指定运行所需要的虚拟机环境。它是必填字段。目前可用的虚拟机如下。
     runs-on: ubuntu-latest
+    # steps字段指定每个 Job 的运行步骤，可以包含一个或多个步骤
     steps:
       - name: Checkout
         uses: actions/checkout@v3
