@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 一次node服务的内存泄漏排查记录(DevTool使用)
 description: 正在连接云数据库🧠
 tags: NodeJs

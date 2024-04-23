@@ -1,0 +1,68 @@
+title: sultan
+url: https://sultan-young.github.io
+author: sultan
+email: sultany@163.com
+description: > # this means to ignore newlines until "show_exerpts:"
+  Here are some ideas to get you started: <br/>
+  - 🔭 I’m currently working on Hungry Panda <br/>
+  - 🌱 I’m currently learning Angular... <br/>
+  - 📫 How to reach me: sultany@163.com <br/>
+show_excerpts: false # set to true to show excerpts on the homepage
+
+paginate: 5
+paginate_path: "/blog/page:num/"
+
+tag_permalink_style: pretty
+tag_page_layout: tag_page
+tag_page_dir: tag
+
+# jekyll-dash date format
+# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
+dash:
+  # the way how dates should be displayed
+  date_format: "%b %-d, %Y"
+
+  # (optional) discqus comment configuration
+  disqus:
+    shortname: bitbrain-github-io
+
+  # generate social links in footer
+  # supported colors: green, red, orange, blue, cyan, pink, teal, yellow, indigo, purple
+  social_links:
+    # - url: https://twitter.com/bitbrain_
+    #   icon: twitter-square
+    #   color: cyan
+    # - url: https://bitbrain.itch.io
+    #   icon: itch-io
+    #   color: red
+    # - url: https://github.com/bitbrain
+    #   icon: github-square
+    #   color: purple
+    - url: https://github.com/sultan-young
+      icon: github-square
+      color: yellow
+
+  # wether the author box should be displayed
+  show_author: true
+
+  # the animation speed of the scroll-in effect
+  animation_speed: 50
+
+  # wether to enable Right-to-Left support or not
+  rtl: false
+
+  # Replaces the default avatar provider (gravatar)
+  avatar_source: github
+  github_username: sultan
+  avatar_source: local
+  avatar_path: /assets/avatar.png
+
+# Build settings
+theme: jekyll-dash
+
+plugins:
+ - jekyll-feed
+ - jekyll-seo-tag
+ - jekyll-paginate
+ - liquid-md5
+ - jekyll/tagging

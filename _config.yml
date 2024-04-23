@@ -1,68 +1,103 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
 title: sultan
-url: https://sultan-young.github.io
-author: sultan
 email: sultany@163.com
-description: > # this means to ignore newlines until "show_exerpts:"
+description: >- # this means to ignore newlines until "baseurl:"
   Here are some ideas to get you started: <br/>
   - 🔭 I’m currently working on Hungry Panda <br/>
   - 🌱 I’m currently learning Angular... <br/>
   - 📫 How to reach me: sultany@163.com <br/>
-show_excerpts: false # set to true to show excerpts on the homepage
-
-paginate: 5
-paginate_path: "/blog/page:num/"
-
-tag_permalink_style: pretty
-tag_page_layout: tag_page
-tag_page_dir: tag
-
-# jekyll-dash date format
-# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
-dash:
-  # the way how dates should be displayed
-  date_format: "%b %-d, %Y"
-
-  # (optional) discqus comment configuration
-  disqus:
-    shortname: bitbrain-github-io
-
-  # generate social links in footer
-  # supported colors: green, red, orange, blue, cyan, pink, teal, yellow, indigo, purple
-  social_links:
-    # - url: https://twitter.com/bitbrain_
-    #   icon: twitter-square
-    #   color: cyan
-    # - url: https://bitbrain.itch.io
-    #   icon: itch-io
-    #   color: red
-    # - url: https://github.com/bitbrain
-    #   icon: github-square
-    #   color: purple
-    - url: https://github.com/sultan-young
-      icon: github-square
-      color: yellow
-
-  # wether the author box should be displayed
-  show_author: true
-
-  # the animation speed of the scroll-in effect
-  animation_speed: 50
-
-  # wether to enable Right-to-Left support or not
-  rtl: false
-
-  # Replaces the default avatar provider (gravatar)
-  avatar_source: github
-  github_username: sultan
-  avatar_source: local
-  avatar_path: /assets/avatar.png
+github_username: sultan
+minimal_mistakes_skin: dirt
+search: true
 
 # Build settings
-theme: jekyll-dash
+markdown: kramdown
+remote_theme: mmistakes/minimal-mistakes
+# Outputting
+permalink: /:categories/:title/
+paginate: 5 # amount of posts to show
+paginate_path: /page:num/
+timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
+include:
+  - _pages
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+
+# Plugins (previously gems:)
 plugins:
- - jekyll-feed
- - jekyll-seo-tag
- - jekyll-paginate
- - liquid-md5
- - jekyll/tagging
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
+
+author:
+  name   : "sultan"
+  avatar : "/assets/images/avatar.png"
+  bio    : "越过山丘，遇到更好的我"
+  links:
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://sultan-young.github.io/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/sultan-young"
+
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/"
+
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type:   
+  path: /tags/
