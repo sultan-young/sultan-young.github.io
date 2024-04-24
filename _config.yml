@@ -14,7 +14,6 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 url: https://sultan-young.github.io
-repository: https://github.com/sultan-young/sultan-young.github.io
 
 title: sultan
 email: sultany@163.com
